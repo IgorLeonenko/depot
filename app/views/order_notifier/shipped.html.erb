@@ -1,0 +1,11 @@
+<h3>Dear <%= @order.name %> You order has been send</h3>
+
+<table>
+  <tr>
+    <th colspan="2">Description</th>
+    <th>Price</th>
+  </tr>
+  <%= render @order.line_items -%>
+</table>
+
+<b>Shipping date: <%= @order.ship_date %></b>

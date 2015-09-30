@@ -16,7 +16,7 @@ Product.create!(
   you should add Ruby to your toolbox.
   </p>},
   image_url: 'ruby.png',
-  price: 49.95
+  price: 145.30
 )
 
 Product.create!(
@@ -30,3 +30,7 @@ Product.create!(
   image_url: 'coffeescript.png',
   price: 49.95
 )
+
+PaymentType.create!(name: 'Check')
+PaymentType.create!(name: 'Credit card')
+PaymentType.create!(name: 'Purchase order')

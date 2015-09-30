@@ -1,0 +1,3 @@
+$('#cart').html("<%= escape_javascript render(@cart) %>");
+
+if ($('#cart td.item_price').length == 0) { $('#cart').hide(); };

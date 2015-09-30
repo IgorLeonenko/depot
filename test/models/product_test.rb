@@ -74,4 +74,9 @@ class ProductTest < ActiveSupport::TestCase
     assert_equal ["is too short (minimum is 10 characters)"], product.errors[:title]
   end
 
+  test "product is not valid without a unique img_url" do
+    product = new_product(products(:ruby).image_url)
+    assert !product.save
+    assert_equal ["has already been taken"], product.errors[:image_url] 
+  end
 end
